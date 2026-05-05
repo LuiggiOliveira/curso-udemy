@@ -15,7 +15,7 @@ public class TipoString {
         System.out.println(b.endsWith("isa")); //(WHERE msg LIKE "%Boa";)
         System.out.println(b.length());
         System.out.println(b.equals(a));
-        System.out.println(b.equalsIgnoreCase(a));
+        System.out.println(b.equalsIgnoreCase(a)); //ignora caixa alta
 
         var nome = "Pedrinho";
         var sobrenome = " Santos".toUpperCase();
