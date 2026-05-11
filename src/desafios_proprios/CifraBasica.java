@@ -2,12 +2,12 @@ package desafios_proprios;
 
 //Simplesmente crie um programa em que eu possa cifrar uma mensagem (uma frase) e ainda decodificar uma mensagem
 
-public class CifraBasica {
+public class CifraBasica { //TODO talvez tratar caracteres especiais e acentos na hora de cifrar?
 //     MAIN
     public static void main(String[] args) {
         CifraBasica cb = new CifraBasica();
 
-        System.out.println(cb.cifrarSimples("Boa viagem meu Jovi"));
+        System.out.println(cb.cifrarSimples("você é legal!  "));
         System.out.println(cb.decifrarSimples("2 15 1 0 22 9 1 7 5 13 0 13 5 21 0 10 15 22 9"));
     }
 
