@@ -24,7 +24,7 @@ public class Wrapper { // o "OOP" dos Primitivos
 
         Boolean bo = Boolean.parseBoolean("true");
         System.out.println(bo);
-        if (bo) System.out.println("provando que agora bo é boolean");
+        if (bo) System.out.println("provando que agora bo é boolean"); //SIM, É POSSÍVEL IF SEM CHAVES!! (mas só com uma instrução)
         System.out.println(bo.toString().toUpperCase() + " provando que agora bo é uma String");
 
         Character c = 's';

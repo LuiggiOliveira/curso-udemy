@@ -4,6 +4,16 @@ import java.util.Scanner;
 
 public class Console {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        //testando next() e o nextLine()
+        System.out.println("NextLine:");
+        String teste2 = sc.nextLine();
+        System.out.println("Next:");
+        String teste1 = sc.next();
+        System.out.println(teste1); //como era esperado, só pegou a primeira parte da String (ignorando os espaços)
+        System.out.println(teste2); //já nesse pegou toda a String
+
         String msg = "Bom dia";
 
         System.out.print("Bom");
@@ -23,8 +33,6 @@ public class Console {
         System.out.printf("%.3f\n", 1.2344); //1.234
         System.out.printf("%.3f\n", 1.2345); //1.235
         System.out.printf("%.3f\n", 1.2346); //1.236
-
-        Scanner sc = new Scanner(System.in); //woow nunca usei isso aqui!!! (ironia)
 
         System.out.println("Digite seu nome:");
         String nome = sc.nextLine();
