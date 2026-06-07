@@ -15,14 +15,17 @@ public class TipoString {
         System.out.println(b.endsWith("isa")); //(WHERE msg LIKE "%Boa";)
         System.out.println(b.length());
         System.out.println(b.equals(a));
-        System.out.println(b.equalsIgnoreCase(a));
+        System.out.println(b.equalsIgnoreCase(a)); //ignora caixa alta
 
         var nome = "Pedrinho";
         var sobrenome = " Santos".toUpperCase();
         String frase = String.format("%s%s\n",nome,sobrenome);
         String frase2 = nome + sobrenome;
 
-        System.out.println(nome.concat(sobrenome));
+        // OBS: sobre o .concat():
+        // Se uma das strings for null, o operador + tratará o valor como a string literal "null".
+        // Já o .concat() lançará uma exceção NullPointerException.
+        System.out.println(nome.concat(sobrenome)); // além disso é mais limpo sintaticamente do que '+', pois permite encadeamento
         System.out.printf("%s%s\n",nome,sobrenome);
         System.out.println(frase2);
         System.out.println(frase);
