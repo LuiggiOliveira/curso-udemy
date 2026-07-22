@@ -8,7 +8,7 @@ import java.util.TreeSet;
 public class SetOrganizado {
     public static void main(String[] args) {
 //        é dentro do operador diamond <> que eu coloco o tipo desse conjunto (tem que ser Wrapper caso seja primitivo)
-//        HashSet<String> lista = new HashSet<>(); (NÃO ORDENADO)
+//        Set/HashSet<String> lista = new HashSet<>(); (NÃO ORDENADO)
         SortedSet<String> lista = new TreeSet<>(); //ORDENADO, pois usamos o TreeSet ao invés de HashSet e o SortedSet (ou só Set ou ainda TreeSet
 //        Esse tipo de notação usando <> é chamado de "Generics"
         lista.add("Teste123"); //mostra "String e" dentro dos parênteses vazios
@@ -22,6 +22,7 @@ public class SetOrganizado {
             System.out.println(i);
         }
 
+        //SortedSet -> interface (E ordena por padrão em ASC)  + TreeSet -> também ordena, mas é uma classe concreta (Árvore Rubro-Negra)
         SortedSet<Double> notas = new TreeSet<>();
         notas.add(6.7);
         notas.add(10.0);
