@@ -1,7 +1,5 @@
 package POO.composicao.desafio;
 
-import java.util.ArrayList;
-
 public class Produto {
 
     final String nome;

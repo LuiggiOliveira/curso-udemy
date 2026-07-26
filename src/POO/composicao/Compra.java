@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Compra {
 
     String cliente;
-    ArrayList<Item> itens = new ArrayList<Item>(); // relação 1:N
+    ArrayList<Item> itens = new ArrayList<>(); // relação 1:N
 
     // obs: ao mudar de uma relação unidirecional para uma bidirecional, tive que ter mais cuidado com a consistência dessa relação entre
     // compra e item e não só apenas usar "compra1.itens.add(new Item(...));"

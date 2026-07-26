@@ -17,15 +17,6 @@ public class Cliente {
         System.out.println("Compra adicionada à lista de compras do cliente.");
     }
 
-    double getValorTotal(){
-        double total = 0;
-
-        for (Compra compra: compras){
-            total += compra.getValorTotal();
-        }
-        return total;
-    }
-
     void detalharCliente(){
         int id_compra = 1;
         double total_cliente = 0;

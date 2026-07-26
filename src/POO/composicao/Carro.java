@@ -40,7 +40,4 @@ public class Carro {
     int getGiros(){
         return motor.giros();
     }
-
-    public void fer() {
-    }
 }

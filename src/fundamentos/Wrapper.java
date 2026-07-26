@@ -30,5 +30,7 @@ public class Wrapper { // o "OOP" dos Primitivos
         Character c = 's';
         System.out.println(c + " teste " + 'p');
         // ctrl + alt + L -> formata o código
+
+
     }
 }

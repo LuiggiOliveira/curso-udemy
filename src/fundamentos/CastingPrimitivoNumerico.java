@@ -18,7 +18,7 @@ public class CastingPrimitivoNumerico {
 
         //(+)int - (+)256 = byte --> OU AINDA -->  (-)int + (+)256 = byte
         //127 -> +127 | 128 -> -128 | 129 -> -127 | 130 -> -126 | 256 -> 0 | -256 -> 0 | -130 -> +126 | -128 -> -128 | -129 -> +127
-        int a = 256;
+        int a = 128;
         byte b = (byte) a; //necessita de casting explícito
         System.out.println(a);
         System.out.println(b);
