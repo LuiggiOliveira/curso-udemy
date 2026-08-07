@@ -1,4 +1,4 @@
-package POO.composicao;
+package poo.composicao;
 
 public class CarroTeste {
 

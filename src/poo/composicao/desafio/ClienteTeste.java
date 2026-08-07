@@ -1,4 +1,4 @@
-package POO.composicao.desafio;
+package poo.composicao.desafio;
 
 public class ClienteTeste {
 
@@ -10,7 +10,6 @@ public class ClienteTeste {
         Produto produto1 = new Produto("Ventilador", 129.56);
         Produto produto2 = new Produto("Notebook", 2200.00);
         Produto produto3 = new Produto("Celular", 1500.00);
-        Produto produto4 = new Produto("Café Solúvel", 5.2);
 
         // COMPRAS DO PRIMEIRO CLIENTE
         cliente.criarCompra();
@@ -26,7 +25,7 @@ public class ClienteTeste {
 
         // COMPRAS DO SEGUNDO CLIENTE
         cliente2.criarCompra();
-        cliente2.compras.get(0).adicionarItem(produto4, 3);
+        cliente2.compras.get(0).adicionarItem("Café Solúvel", 5.2, 3); // instanciei outro produto aqui diretamente
         cliente2.compras.get(0).adicionarItem(produto3, 1);
 
         cliente2.criarCompra();
@@ -35,5 +34,6 @@ public class ClienteTeste {
 
         System.out.println();
         cliente2.detalharCliente();
+
     }
 }

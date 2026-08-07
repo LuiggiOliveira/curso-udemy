@@ -1,4 +1,4 @@
-package POO.composicao.desafio;
+package poo.composicao.desafio;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +46,7 @@ public class Cliente {
             id_compra++;
         }
 
-        System.out.println("→ Total gasto pelo cliente: R$" + this.getTotalCliente());
+        System.out.println("→ Total gasto pelo cliente: R$ " + this.getTotalCliente());
     }
 
 }

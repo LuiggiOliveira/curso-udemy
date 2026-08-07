@@ -7,7 +7,7 @@ public class DesafioPrimeiroTrauma { //foi bem fácil na realidade :)
     //todo RESPOSTA3: simplesmente criar outra variável (static) x de mesmo valor que a e imprimir na main
     static int b = 3;
 
-    //todo RESPOSTA2: já que eu não posso mexer NESSA LINHA, então eu posso mexer aqui também.
+    //todo RESPOSTA2: já que eu não posso mexer NESSA LINHA, então eu posso mexer aqui.
 
     //com qualquer método que retorne ou imprima diretamente o valor dela, já que por padrão todo objeto vai vir com o valor 3 desse campo
     void imprimirValorDoCampoA() {

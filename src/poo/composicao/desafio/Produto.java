@@ -1,4 +1,4 @@
-package POO.composicao.desafio;
+package poo.composicao.desafio;
 
 public class Produto {
 
