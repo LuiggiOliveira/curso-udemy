@@ -1,16 +1,21 @@
 package poo.heranca;
 
 public class Monstro extends Jogador {
+
+    public Monstro(String nome, int vida, int coord_x, int coord_y){
+        super(nome, vida, coord_x, coord_y);
+    }
+
     @Override
-    boolean atacar(Jogador oponente){ // aqui eu deixei sem usar o super.atacar(oponente) para mostrar que é possível fazer assim também
+    public boolean atacar(Jogador oponente){ // aqui eu deixei sem usar o super.atacar(oponente) para mostrar que é possível fazer assim também
         int deltaX = Math.abs(x - oponente.x);
         int deltaY = Math.abs(y - oponente.y);
 
         if (deltaX == 0 && deltaY == 1){
-            oponente.vida -= 11;
+            oponente.setVida(11);  // no caso alterei para não setar para 11, mas sim para decrementar 11 a vida do oponente
             return true;
         } else if (deltaX == 1 && deltaY == 0) {
-            oponente.vida -= 11;
+            oponente.setVida(11);
             return true;
         } else {
             System.out.println(this.nome + " errou o ataque! (Fora do alcance)");

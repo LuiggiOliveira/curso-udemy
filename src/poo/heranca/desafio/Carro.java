@@ -2,29 +2,34 @@ package poo.heranca.desafio;
 
 public class Carro {
 
-    int velocidadeAtual;
-    int velocidadeMaxima;
-    int aceleracao;
+    protected int velocidadeAtual;
+    public final int VELOCIDADE_MAXIMA;
+    private int aceleracao;
 
     Carro (){
-        this.velocidadeMaxima = 130;
+        this.VELOCIDADE_MAXIMA = 130;
         this.aceleracao = 5;
     }
 
-    boolean acelerar(){
-        if ((velocidadeAtual + aceleracao) <= velocidadeMaxima){
-            velocidadeAtual += aceleracao; // caso fosse, por exemplo, 129 km/h, daria para acelerar, mas no caso iria para 134km/h e não para 130 que é o max
+    public Carro (int velocidadeMaxima){
+        this.VELOCIDADE_MAXIMA = velocidadeMaxima;
+        this.aceleracao = 5;
+    }
+
+    public boolean acelerar(){
+        if ((velocidadeAtual + getAceleracao()) <= VELOCIDADE_MAXIMA){
+            velocidadeAtual += getAceleracao(); // caso fosse, por exemplo, 129 km/h, daria para acelerar, mas no caso iria para 134km/h e não para 130 que é o max
             System.out.println("Velocidade Atual: " + velocidadeAtual + " km/h.");
             return true;
-        } else if ((velocidadeAtual + aceleracao) > velocidadeMaxima){
-            velocidadeAtual = velocidadeMaxima; // aceleração constante
+        } else if ((velocidadeAtual + getAceleracao()) > VELOCIDADE_MAXIMA){
+            velocidadeAtual = VELOCIDADE_MAXIMA; // aceleração constante
             System.out.println("Velocidade Atual: " + velocidadeAtual + " km/h.");
             return true;
         }
         return false;
     }
 
-    boolean frear(){
+    public boolean frear(){
         if (velocidadeAtual >= aceleracao){
             velocidadeAtual -= aceleracao;
             System.out.println("Velocidade Atual: " + velocidadeAtual + " km/h.");
@@ -36,5 +41,13 @@ public class Carro {
         }
         System.out.println("Não foi possível desacelerar, pois o carro já está parado.");
         return false;
+    }
+
+    public int getAceleracao() {
+        return aceleracao;
+    }
+
+    public void setAceleracao(int aceleracao) {
+        this.aceleracao = aceleracao;
     }
 }

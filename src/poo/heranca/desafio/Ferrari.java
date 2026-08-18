@@ -1,13 +1,54 @@
 package poo.heranca.desafio;
 
-public class Ferrari extends Carro {
+public class Ferrari extends Carro implements Esportivo, Luxo { //implementa 2 interface ao mesmo tempo, mas herda apenas de 1 classe
 
-//    obs: se eu não definir esse construtor, por padrão iria chamar o construtor da superclasse mesmo com "new Ferrari()"
-    Ferrari(){
-        this.velocidadeMaxima = 220;
-        this.aceleracao = 15;
+    private boolean ligarTurbo;
+    private boolean ligarAr;
+
+    public Ferrari(){
+        this(300);
     }
 
-// obs2: eu poderia sobrescrever os métodos colocando por exemplo "void acelerar(){ velocidadeAtual += 15; }", porém
-// acho que do modo que fiz ficou melhor do que no exemplo da aula.
+    public Ferrari(int velocidadeMaxima){
+        super(velocidadeMaxima);
+        this.setAceleracao(15);
+    }
+
+    @Override
+    public void ligarTurbo(){
+        ligarTurbo = true;
+    }
+
+    @Override
+    public void desligarTurbo() {
+        ligarTurbo = false;
+    }
+
+    @Override
+    public void ligarAr() {
+        ligarAr = true;
+    }
+
+    @Override
+    public void desligarAr() {
+        ligarAr = false;
+    }
+
+//    @Override
+//    public int velocidadeDoAr() {
+//        return 0;
+//    } -> como foi definido por padrão para retornar 1 na interface, aqui fica opcional a sua implementação
+
+    @Override
+    public int getAceleracao() {
+        if (ligarTurbo && !ligarAr){
+            return 35;
+        } else if (ligarTurbo){
+            return 30;
+        } else if (!ligarAr){
+            return 20;
+        } else {
+            return 15;
+        }
+    }
 }
