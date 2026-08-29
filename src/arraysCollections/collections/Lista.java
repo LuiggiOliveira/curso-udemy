@@ -1,13 +1,19 @@
 package arraysCollections.collections;
 
 import java.util.ArrayList; //implementar List, sendo uma classe concreta
-//import java.util.List; interface
+import java.util.List;
 
-public class List {
+public class Lista {
     public static void main(String[] args) {
         ArrayList<Usuario> lista = new ArrayList<>();
-
         Usuario u1 = new Usuario("Ana");
+
+//        Da mesma forma que Set, eu consigo inserir dados heterogêneos, mesmo que isso não seja o ideal...
+        List talcoisa = new ArrayList();
+        talcoisa.add("Sla");
+        talcoisa.add(1.2);
+        System.out.println(talcoisa.get(1));
+        System.out.println(talcoisa.get(0));
 
         lista.add(u1);
         lista.add(new Usuario("Carlos"));
