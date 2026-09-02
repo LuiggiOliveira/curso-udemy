@@ -9,6 +9,8 @@ public class Consumidor {
     public static void main(String[] args) {
 
         Consumer<Produto> imprimir = p -> System.out.println(p.nome + "!!!");
+        // Consumer<Produto> imprimir = System.out::println;
+        // produtos.forEach(imprimir);
 
         Produto p1 = new Produto("Caneta", 10.00, 0.09);
         imprimir.accept(p1);
