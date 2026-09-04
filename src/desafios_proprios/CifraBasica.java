@@ -7,8 +7,9 @@ public class CifraBasica { //TODO talvez tratar caracteres especiais e acentos n
     public static void main(String[] args) {
         CifraBasica cb = new CifraBasica();
 
-        System.out.println(cb.cifrarSimples("você é legal!  "));
-        System.out.println(cb.decifrarSimples("2 15 1 0 22 9 1 7 5 13 0 13 5 21 0 10 15 22 9"));
+        System.out.println(cb.cifrarSimples("_BoA @vIaGeM mEu JoVem!!!!!!!!!!"));
+        System.out.println(cb.decifrarSimples("2 15 1 0 22 9 1 7 5 13 0 13 5 21 0 10 15 22 5 13"));
+        System.out.println(cb.decifrarSimples("1 2 15 1 0 1 22 9 1 7 5 13 0 13 5 21 0 10 15 22 5 13 1 1 1 1 1 1 1 1 1 1 "));
     }
 
 //    BUSCA O ÍNDICE QUE CORRESPONDE À POSIÇÃO DA LETRA NO ALFABETO
@@ -37,7 +38,7 @@ public class CifraBasica { //TODO talvez tratar caracteres especiais e acentos n
         String msg_cifrada = "";
 
         for (int i = 0; i < msg.length() ; i++){
-            msg_cifrada = msg_cifrada + " " + buscar_char_alfabeto(msg.charAt(i));
+            msg_cifrada = msg_cifrada + buscar_char_alfabeto(msg.charAt(i)) + " ";
         }
         return msg_cifrada;
     }
@@ -51,7 +52,7 @@ public class CifraBasica { //TODO talvez tratar caracteres especiais e acentos n
 
         int i;
         for (i = 0; i < alfabeto.length(); i++){
-            if (indice_int == i+1){
+            if (indice_int == i + 1){
                 break;
             }
         }
