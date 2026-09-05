@@ -1,2 +1,2 @@
 ﻿# curso-udemy
--- METAS: concluir este curso ao mesmo tempo que leio o livro do Deitel até certo ponto. Depois focar só estudar pelo livro + praticar bastante os desafios da OBI de lógica "normal" e lógica de programação de todos os anos e de todos os níveis! (Em Java, é claro)
+Aqui no caso é a primeira parte, a que possui os fundamentos do Java. Pois ao decorrer do curso, vou ter que criar novos projetos e, consequentemente, novos repositórios para não misturar as coisas e acabar tudo dando errado ou coisa do tipo. Portanto, terei outros repositórios associados a esse mesmo curso. 
