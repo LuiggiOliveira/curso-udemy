@@ -21,7 +21,7 @@ public class Causa {
         try {
             metodoB(aluno);
         } catch (Exception causa) {
-            throw   new IllegalArgumentException(causa);
+            throw new IllegalArgumentException(causa);
         }
     }
 
